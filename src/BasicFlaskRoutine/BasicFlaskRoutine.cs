@@ -400,7 +400,7 @@ namespace TreeRoutine.Routine.BasicFlaskRoutine
         {
             return new Decorator((x =>
             {
-                var buffs = GameController.Game.IngameState.Data.LocalPlayer.GetComponent<Life>().Buffs;
+                var buffs = GameController.Game.IngameState.Data.LocalPlayer.GetComponent<ExileCore.PoEMemory.Components.Buffs>().BuffsList;
                 foreach (var buff in buffs)
                 {
                     if (float.IsInfinity(buff.Timer))
