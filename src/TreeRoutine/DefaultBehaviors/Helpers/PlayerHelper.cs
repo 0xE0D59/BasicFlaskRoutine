@@ -14,6 +14,8 @@ namespace TreeRoutine.DefaultBehaviors.Helpers
         where TCache : BaseTreeCache, new()
     {
         public BaseTreeRoutinePlugin<TSettings, TCache> Core { get; set; }
+        
+        public bool IsLowLife => isHealthBelowPercentage(50);
 
         public Boolean isHealthBelowPercentage(int healthPercentage)
         {

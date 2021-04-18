@@ -381,7 +381,7 @@ namespace TreeRoutine.Routine.BasicFlaskRoutine
             // If the flask is instant, no special logic needed
             return playerFlask.InstantType == FlaskInstantType.Partial
                     || playerFlask.InstantType == FlaskInstantType.Full
-                    || playerFlask.InstantType == FlaskInstantType.LowLife && PlayerHelper.isHealthBelowPercentage(35);
+                    || playerFlask.InstantType == FlaskInstantType.LowLife && PlayerHelper.IsLowLife;
         }
 
         private bool CanUseFlaskAsRegen(PlayerFlask playerFlask)
